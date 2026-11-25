@@ -19,7 +19,9 @@
 ## Phase 2: Pages
 - [x] Draft built with placeholders (branch `pages`): Home (index.html), Services & rates (services.html), Our Story (about.html), The Studio / gear (gear.html). Shared css/site.css.
 - [x] Added (inspired by Blackbird's layout): hero phone line, gear-by-the-numbers row, "Made here" album covers, testimonial block (Home); room quick facts, floor plan and photo gallery (Studio). Show counts only once Nathan supplies real numbers; testimonials only real and with permission.
-- [ ] Work page (credits, samples) and Book/Contact page with the StaticForms inquiry form. Until then, inquiry buttons use mailto:nathan@stirlingsound.com.
+- [x] Book/Contact page (contact.html) with the inquiry form wired for StaticForms (JSON fetch, honeypot, inline thank-you). All booking buttons now point here.
+- [ ] Connect the form: put the StaticForms API key in data-api-key on the form in contact.html (keys are public form keys; never commit account passwords). Until then the form shows a "not connected yet" note with the email address.
+- [ ] Work page (credits, samples)
 - [ ] Replace every highlighted [PLACEHOLDER] with client content; remove the noindex tag at launch
 - Home, The Studio, Services, Our Story, Work, Book/Contact
 - Real content where it exists, flagged placeholders everywhere else

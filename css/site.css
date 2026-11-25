@@ -174,3 +174,18 @@ h1 + .lead, h2 + .lead, h2 + p { margin-top: var(--space-4); }
 .gallery figure { margin: 0; }
 .gallery .ph span { display: none; }
 .gallery figcaption { margin-top: var(--space-2); }
+
+/* ---- Contact page -------------------------------------------------- */
+.contact-grid { display: grid; gap: var(--space-7); align-items: start; }
+@media (min-width: 900px) { .contact-grid { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: var(--space-8); } }
+.contact-aside { padding-top: var(--space-2); }
+.h4-like { font-size: var(--fs-h4); line-height: var(--lh-h4); font-weight: 500; }
+.field fieldset, fieldset.field { border: 0; padding: 0; margin: 0 0 var(--space-5); min-width: 0; }
+fieldset.field legend { margin-bottom: var(--space-3); padding: 0; }
+select.input { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--color-text) 50%), linear-gradient(135deg, var(--color-text) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 40px; }
+#form-status { margin-top: var(--space-5); outline: none; }
+#form-status.note { padding: var(--space-5); background: var(--color-surface-alt); border-radius: var(--radius-md); }
+#form-status.error-box { padding: var(--space-5); border: 2px solid var(--color-error); border-radius: var(--radius-md); color: var(--color-error); }
+#form-status p { margin: 0; }
+.field { align-content: start; }
+.field .choice, .choice { font: var(--fw-regular) 1rem/1.5 var(--font-sans); letter-spacing: 0; text-transform: none; color: var(--color-text); min-height: 44px; }

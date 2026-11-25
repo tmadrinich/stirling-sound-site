@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a session | Stirling Sound</title>
+<meta name="description" content="Send an inquiry to book a recording, mixing or Dolby Atmos session at Stirling Sound.">
+<meta name="robots" content="noindex"><!-- remove at launch -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">Stirling Sound</a>
+    <nav class="nav" aria-label="Main"><a href="gear.html">The studio</a><a href="services.html">Services &amp; rates</a><a href="about.html">Our story</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    <a class="btn header-cta" href="contact.html">Check dates</a>
+    <details class="menu">
+      <summary aria-label="Open menu">Menu</summary>
+      <nav class="menu-panel" aria-label="Main (mobile)">
+        <a href="index.html">Home</a><a href="gear.html">The studio</a><a href="services.html">Services &amp; rates</a><a href="about.html">Our story</a><a href="contact.html" aria-current="page">Contact</a>
+        <a class="btn" href="contact.html">Check dates</a>
+      </nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Booking</p>
+    <h1>Tell us about the record.</h1>
+    <p class="lead">Send your dates, how many people are coming and what you're making. We'll reply with availability and a quote within <span class="tbd">[RESPONSE TIME]</span>.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container contact-grid">
+    <div>
+      <form id="inquiry" class="card" novalidate data-api-key="[STATICFORMS_API_KEY]">
+        <p class="small muted" style="margin-bottom:var(--space-5)">Fields marked <span class="req">*</span> are required.</p>
+        <div class="field-row"><div class="field"><label for="name">Name <span class="req" aria-hidden="true">*</span></label><input class="input" id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err"><p class="error" id="name-err" hidden>Required.</p></div><div class="field"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input class="input" id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><p class="error" id="email-err" hidden>Required.</p></div></div>
+        <div class="field-row"><div class="field"><label for="artist">Artist / band <span class="req" aria-hidden="true">*</span></label><input class="input" id="artist" name="artist" type="text" placeholder="Who's making the record?" required aria-describedby="artist-err"><p class="error" id="artist-err" hidden>Required.</p></div><div class="field"><label for="phone">Phone</label><input class="input" id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-help"><p class="help" id="phone-help">Optional.</p></div></div>
+        <div class="field-row"><div class="field"><label for="dates">Preferred dates <span class="req" aria-hidden="true">*</span></label><input class="input" id="dates" name="dates" type="text" placeholder="e.g. June 8 to 14" required aria-describedby="dates-help dates-err"><p class="help" id="dates-help">Rough is fine.</p><p class="error" id="dates-err" hidden>Required.</p></div><div class="field"><label for="people">People coming <span class="req" aria-hidden="true">*</span></label><input class="input" id="people" name="people" type="number" placeholder="4" required aria-describedby="people-err"><p class="error" id="people-err" hidden>Required.</p></div></div>
+        <fieldset class="field" aria-describedby="staying-err">
+          <legend>Staying on site? <span class="req" aria-hidden="true">*</span></legend>
+          <div><label class="choice"><input type="radio" name="staying" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="staying" value="No"> No</label><label class="choice"><input type="radio" name="staying" value="Not sure"> Not sure</label></div>
+          <p class="error" id="staying-err" hidden>Required.</p>
+        </fieldset>
+        <div class="field"><label for="service">What are you making?</label>
+          <select class="input" id="service" name="service"><option value="">Choose one</option><option>Tracking</option><option>Mixing</option><option>Dolby Atmos mix</option><option>Mastering</option><option>Full record</option><option>The Stirling Sound Experience</option><option>Not sure yet</option></select></div>
+        <label class="choice" style="margin-bottom:var(--space-5)"><input type="checkbox" name="flexible" value="Yes"> My dates are flexible</label>
+        <div class="field"><label for="message">Tell us about the record</label><textarea class="input" id="message" name="message" placeholder="Songs, references, who's producing, anything else we should know."></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="honeypot">Leave this empty</label><input id="honeypot" name="honeypot" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn--block" type="submit">Send an inquiry</button>
+      </form>
+      <div id="form-status" role="status" tabindex="-1" hidden></div>
+    </div>
+    <aside class="contact-aside" aria-label="Other ways to reach us">
+      <h2 class="h4-like">Other ways to reach us</h2>
+      <dl class="room-facts">
+        <div><dt>Email</dt><dd><a href="mailto:nathan@stirlingsound.com?subject=Studio%20Inquiry">nathan@stirlingsound.com</a></dd></div>
+        <div><dt>Phone</dt><dd><span class="tbd">[PHONE]</span></dd></div>
+        <div><dt>Location</dt><dd><span class="tbd">[TOWN / AREA SERVED]</span>, Minnesota</dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/stirlingsound/">@stirlingsound</a></dd></div>
+      </dl>
+      <p class="small muted" style="margin-top:var(--space-6)">Booking for a big group or a long stay? Mention it in the form and we'll plan the lodging with you.</p>
+    </aside>
+  </div>
+</section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="wordmark" href="index.html">Stirling Sound</a>
+        <p>A family-run recording studio on <span class="tbd">[LAKE NAME]</span>, Minnesota. Since 1994.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul><li><a href="gear.html">The studio</a></li><li><a href="services.html">Services &amp; rates</a></li><li><a href="about.html">Our story</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:nathan@stirlingsound.com?subject=Studio%20Inquiry">nathan@stirlingsound.com</a></li>
+          <li><span class="tbd">[PHONE]</span></li>
+          <li><span class="tbd">[TOWN / AREA SERVED]</span>, Minnesota</li>
+          <li><a href="https://www.instagram.com/stirlingsound/">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base"><span>&copy; 2026 Stirling Sound</span><span>Make the record. Stay at the lake.</span></div>
+  </div>
+</footer>
+<script>
+{
+  // StaticForms: https://www.staticforms.dev/docs/api-reference
+  // Put the real key in data-api-key on the form. Until then the form explains it isn't connected.
+  const form = document.getElementById('inquiry');
+  const status = document.getElementById('form-status');
+  const btn = form.querySelector('button[type=submit]');
+  const key = form.dataset.apiKey || '';
+  const connected = key && !key.startsWith('[');
+
+  const show = (cls, html) => { status.className = cls; status.innerHTML = html; status.hidden = false; status.focus(); };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let first = null;
+    form.querySelectorAll('[required]').forEach((el) => {
+      const ok = el.type === 'radio' ? form.querySelector(`[name="${el.name}"]:checked`) : el.value.trim() && el.checkValidity();
+      const err = document.getElementById(el.name + '-err');
+      el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+      if (err) err.hidden = !!ok;
+      if (!ok && !first) first = el;
+    });
+    if (first) { first.focus(); return; }
+
+    if (!connected) {
+      show('note', '<p><strong>This form isn\'t connected yet.</strong> For now, email <a href="mailto:nathan@stirlingsound.com?subject=Studio%20Inquiry">nathan@stirlingsound.com</a>.</p>');
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form));
+    data.apiKey = key;
+    data.replyTo = data.email;
+    data.subject = 'Studio inquiry: ' + (data.artist || data.name);
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://api.staticforms.dev/submit', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data)
+      });
+      if (!res.ok) throw new Error(res.status);
+      form.hidden = true;
+      const name = document.createElement('strong'); name.textContent = data.name;
+      show('success', '');
+      status.append('Thanks, ', name, '. We got your inquiry and will reply within [RESPONSE TIME].');
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Send an inquiry';
+      show('error-box', '<p>Something went wrong and your inquiry wasn\'t sent. Try again, or email <a href="mailto:nathan@stirlingsound.com?subject=Studio%20Inquiry">nathan@stirlingsound.com</a>.</p>');
+    }
+  });
+}
+</script>
+</body>
+</html>
