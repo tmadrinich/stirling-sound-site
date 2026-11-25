@@ -35,23 +35,27 @@
   --green-600: #2F6B45;
   --green-300: #86C9A0;
 
-  /* ---- Semantic (light / default) ------------------------------------- */
-  --color-bg: var(--ivory-50);
-  --color-surface: var(--paper);
-  --color-surface-alt: var(--ivory-100);
-  --color-text: var(--ink-900);               /* 16.0:1 on ivory */
-  --color-text-muted: var(--stone-600);       /* 6.5:1 on ivory */
-  --color-heading: var(--black-950);          /* 17.6:1 on ivory */
-  --color-accent: var(--gold-700);            /* 5.3:1 on ivory, 4.7:1 on ivory-100 */
-  --color-cta-bg: var(--black-950);
-  --color-cta-bg-hover: var(--black-800);
-  --color-cta-text: var(--gold-500);          /* 7.4:1 on black */
-  --color-link: var(--black-950);
-  --color-line: var(--line-200);
-  --color-field-border: var(--steel-400);     /* 3.9:1 on ivory */
-  --color-focus: var(--gold-700);             /* 5.3:1 on ivory */
-  --color-error: var(--red-600);
-  --color-success: var(--green-600);
+  /* ---- Semantic (default: dark, "control room") ---------------------
+     60-30-10: black shades are the 60 (page, surfaces, panels), oxblood
+     bands are the 30 (data-theme="oxblood"), gold is the 10 (CTAs, links,
+     headings). Ivory sections are still available via data-theme="light". */
+  color-scheme: dark;
+  --color-bg: var(--black-950);
+  --color-surface: var(--black-900);
+  --color-surface-alt: var(--black-800);
+  --color-text: var(--ivory-50);              /* 17.6:1 on 950, 15.0:1 on 800 */
+  --color-text-muted: var(--fog-300);         /* 7.8:1 on 950, 6.7:1 on 800 */
+  --color-heading: var(--gold-500);           /* 7.4:1 on 950, 6.3:1 on 800 */
+  --color-accent: var(--gold-500);
+  --color-cta-bg: var(--gold-500);
+  --color-cta-bg-hover: var(--gold-300);
+  --color-cta-text: var(--black-950);         /* 7.4:1 on gold */
+  --color-link: var(--gold-500);
+  --color-line: var(--black-line);
+  --color-field-border: var(--steel-300);     /* 3.8:1 on 900, 3.5:1 on 800 */
+  --color-focus: var(--gold-300);
+  --color-error: var(--red-300);
+  --color-success: var(--green-300);
 
   /* ---- Type ----------------------------------------------------------- */
   --font-serif: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
@@ -117,8 +121,9 @@
   }
 }
 
-/* Dark sections: add data-theme="dark" (or .section--dark) to any block.
-   "lake" is kept as an alias so older markup still works. */
+/* Black sections: data-theme="dark" (or .section--dark) matches the page
+   default; kept so the header and older markup stay explicit.
+   "lake" is kept as an alias. */
 [data-theme="dark"],
 .section--dark,
 [data-theme="lake"],
@@ -126,35 +131,47 @@
   --color-bg: var(--black-950);
   --color-surface: var(--black-900);
   --color-surface-alt: var(--black-800);
-  --color-text: var(--ivory-50);              /* 17.6:1 */
-  --color-text-muted: var(--fog-300);         /* 7.8:1 */
-  --color-heading: var(--gold-500);           /* 7.4:1 */
-  --color-accent: var(--gold-500);            /* 7.4:1 */
-  --color-cta-bg: var(--gold-500);
-  --color-cta-bg-hover: var(--gold-300);
-  --color-cta-text: var(--black-950);         /* 7.4:1 on gold */
-  --color-link: var(--gold-500);
-  --color-line: var(--black-line);
-  --color-field-border: var(--steel-300);     /* 3.8:1 on black-900 */
-  --color-focus: var(--gold-300);
-  --color-error: var(--red-300);
-  --color-success: var(--green-300);
   background: var(--color-bg);
   color: var(--color-text);
 }
 
-/* Oxblood sections (tertiary): add data-theme="oxblood" to a full-width band.
-   60-30-10: ivory + black grounds carry the page, oxblood bands are the
-   tertiary layer, gold stays the accent. At most one oxblood band per page,
-   never next to another dark or oxblood section.
+/* Ivory sections (optional): data-theme="light" for a long-read block.
+   Logo gold is never text here (2.4:1); accents use gold-700. */
+[data-theme="light"],
+.section--light {
+  color-scheme: light;
+  --color-bg: var(--ivory-50);
+  --color-surface: var(--paper);
+  --color-surface-alt: var(--ivory-100);
+  --color-text: var(--ink-900);               /* 16.0:1 on ivory */
+  --color-text-muted: var(--stone-600);       /* 6.5:1 on ivory */
+  --color-heading: var(--black-950);          /* 17.6:1 on ivory */
+  --color-accent: var(--gold-700);            /* 5.3:1 on ivory, 4.7:1 on ivory-100 */
+  --color-cta-bg: var(--black-950);
+  --color-cta-bg-hover: var(--black-800);
+  --color-cta-text: var(--gold-500);          /* 7.4:1 on black */
+  --color-link: var(--black-950);
+  --color-line: var(--line-200);
+  --color-field-border: var(--steel-400);     /* 3.9:1 on ivory */
+  --color-focus: var(--gold-700);             /* 5.3:1 on ivory */
+  --color-error: var(--red-600);
+  --color-success: var(--green-600);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Oxblood sections (the 30): add data-theme="oxblood" to a full-width band
+   or a feature card. The band sits on oxblood-700 so it reads against black
+   (1.5:1 ground shift); panels inside step down to 800/900. Never two oxblood
+   bands in a row.
    Contrast (WCAG): ivory text 14.5:1 on 900, 11.6:1 on 700; gold-500 6.1:1
    on 900, 4.8:1 on 700; fog-300 6.4:1 / 5.1:1. Field borders use fog-300
    (steel-300 drops below 3:1 on oxblood-700). */
 [data-theme="oxblood"],
 .section--oxblood {
-  --color-bg: var(--oxblood-900);
+  --color-bg: var(--oxblood-700);
   --color-surface: var(--oxblood-800);
-  --color-surface-alt: var(--oxblood-700);
+  --color-surface-alt: var(--oxblood-900);
   --color-text: var(--ivory-50);
   --color-text-muted: var(--fog-300);
   --color-heading: var(--gold-500);
@@ -162,8 +179,8 @@
   --color-cta-bg: var(--gold-500);
   --color-cta-bg-hover: var(--gold-300);
   --color-cta-text: var(--black-950);
-  --color-link: var(--gold-300);              /* 7.8:1 on 900, 6.2:1 on 700 */
-  --color-line: var(--oxblood-line);
+  --color-link: var(--gold-300);              /* 6.2:1 on 700 */
+  --color-line: var(--oxblood-500);
   --color-field-border: var(--fog-300);
   --color-focus: var(--gold-300);
   --color-error: var(--red-300);
