@@ -39,6 +39,20 @@
   </div>
 </section>
 
+<section class="section" id="availability" style="padding-top:0">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Availability</p>
+      <h2>Check the calendar first.</h2>
+      <p class="lead">Open days are free to book. Booked days are already taken by a session or by Nathan's own mixing and mastering. Pick an open day and it drops into the form below.</p>
+      <p class="small muted">Dates aren't held until we confirm by email.</p>
+    </div>
+    <div class="card">
+      <div class="availability" data-availability data-calendar-id="[GOOGLE_CALENDAR_ID]" data-api-key="[GOOGLE_API_KEY]" data-months-ahead="6" data-book-url="contact.html"></div>
+    </div>
+  </div>
+</section>
+
 <section class="section" style="padding-top:0">
   <div class="container contact-grid">
     <div>
@@ -100,6 +114,28 @@
     <div class="footer-base"><span>&copy; 2026 Stirling Sound</span><span>Make the record. Stay at the lake.</span></div>
   </div>
 </footer>
+<script src="js/availability.js" defer></script>
+<script>
+{
+  // Fill "Preferred dates" from the calendar: on this page (click) or from another page (?date=)
+  const datesField = document.getElementById('dates');
+  const nice = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' });
+  const pick = (iso) => {
+    const text = nice(iso);
+    datesField.value = datesField.value.trim() && !datesField.value.includes(text) ? datesField.value + ', ' + text : text;
+  };
+  const q = new URLSearchParams(location.search).get('date');
+  if (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) pick(q);
+  document.getElementById('availability').addEventListener('click', (e) => {
+    const a = e.target.closest('.cal-day a');
+    if (!a) return;
+    e.preventDefault();
+    pick(new URL(a.href).searchParams.get('date'));
+    datesField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    datesField.focus({ preventScroll: true });
+  });
+}
+</script>
 <script>
 {
   // StaticForms: https://www.staticforms.dev/docs/api-reference
