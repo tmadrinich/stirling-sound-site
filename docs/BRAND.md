@@ -32,7 +32,7 @@ Don't recolor, stretch, or set the full ring logo smaller than ~96px (the wordma
 | `--stone-600` | #5B5850 | Secondary text (6.5:1) |
 
 Buttons: on light, black with gold text; on dark, gold with black text.
-Logo gold (#C29957) on light backgrounds is 2.2:1 — never for text there; use `--gold-700`.
+Logo gold (#C29957) on light backgrounds is 2.4:1 — never for text there; use `--gold-700`.
 
 ## Type scale (desktop / mobile, px)
 H1 64/68 · 40/44 — H2 44/50 · 32/38 — H3 32/38 · 26/32 — H4 24/30 · 21/28 (Cormorant Garamond 500–600, to match the logo's classic serif)
