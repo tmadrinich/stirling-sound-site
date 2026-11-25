@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Stirling Sound — tokens.css
+   Brand tokens for stirlingsound.com (plain HTML/CSS).
+   Load fonts first, in <head>:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+   ========================================================================== */
+
+:root {
+  /* ---- Palette (raw) -------------------------------------------------- */
+  --lake-900: #13293D;   /* anchor: deep lake navy */
+  --lake-700: #1C3A52;   /* raised surfaces on navy */
+  --lake-500: #2E6A96;   /* focus ring on light */
+  --lake-line: #2E4A61;  /* hairlines on navy (decorative) */
+  --pine-800: #1E3B33;   /* dark pine: alternate dark ground */
+  --cedar-600: #9C4F22;  /* cedar: CTA on light */
+  --cedar-700: #7F3F19;  /* cedar hover / pressed */
+  --amber-400: #D9A35B;  /* early light: accent + CTA on dark ONLY */
+  --amber-300: #E6B877;  /* amber hover on dark */
+  --birch-50: #F7F4EE;   /* page background */
+  --mist-100: #ECE6DB;   /* alternate light section */
+  --paper: #FFFFFF;      /* cards, fields */
+  --charcoal-900: #23272B; /* body text */
+  --stone-600: #5B6167;  /* secondary text on light */
+  --fog-300: #AEB7BF;    /* secondary text on navy */
+  --line-200: #D9D2C5;   /* hairlines on light (decorative) */
+  --steel-400: #7D8287;  /* field borders on light (3:1+) */
+  --steel-300: #7E93A6;  /* field borders on navy (3:1+) */
+  --red-600: #A3261F;
+  --red-300: #F0907F;
+  --green-600: #2F6B45;
+  --green-300: #86C9A0;
+
+  /* ---- Semantic (light / default) ------------------------------------- */
+  --color-bg: var(--birch-50);
+  --color-surface: var(--paper);
+  --color-surface-alt: var(--mist-100);
+  --color-text: var(--charcoal-900);          /* 13.7:1 on birch */
+  --color-text-muted: var(--stone-600);       /* 5.7:1 on birch */
+  --color-heading: var(--lake-900);           /* 13.6:1 on birch */
+  --color-accent: var(--cedar-600);           /* 5.4:1 on birch */
+  --color-cta-bg: var(--cedar-600);
+  --color-cta-bg-hover: var(--cedar-700);
+  --color-cta-text: var(--paper);             /* 5.9:1 on cedar */
+  --color-link: var(--lake-900);
+  --color-line: var(--line-200);
+  --color-field-border: var(--steel-400);     /* 3.5:1 on birch */
+  --color-focus: var(--lake-500);             /* 5.3:1 on birch */
+  --color-error: var(--red-600);
+  --color-success: var(--green-600);
+
+  /* ---- Type ----------------------------------------------------------- */
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  /* Mobile-first sizes (under 768px) */
+  --fs-h1: 2.5rem;     --lh-h1: 1.1;    /* 40/44 */
+  --fs-h2: 2rem;       --lh-h2: 1.1875; /* 32/38 */
+  --fs-h3: 1.625rem;   --lh-h3: 1.23;   /* 26/32 */
+  --fs-h4: 1.3125rem;  --lh-h4: 1.33;   /* 21/28 */
+  --fs-h5: 1.125rem;   --lh-h5: 1.44;   /* 18/26 */
+  --fs-h6: 1rem;       --lh-h6: 1.5;    /* 16/24 */
+  --fs-body-lg: 1.125rem; --lh-body-lg: 1.56; /* 18/28 */
+  --fs-body: 1rem;     --lh-body: 1.625;      /* 16/26 */
+  --fs-small: 0.875rem; --lh-small: 1.57;     /* 14/22 */
+  --fs-label: 0.8125rem; --lh-label: 1.23;    /* 13/16 */
+  --fs-label-sm: 0.75rem;                     /* 12/16 */
+  --fs-spec: 0.875rem; --lh-spec: 1.57;       /* 14/22 */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --tracking-display: -0.015em;
+  --tracking-label: 0.08em;
+
+  /* ---- Space, radius, layout ----------------------------------------- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --space-9: 96px; --space-10: 128px;
+
+  --radius-sm: 2px;    /* tags */
+  --radius-md: 4px;    /* buttons, fields */
+  --radius-lg: 8px;    /* cards, framed photos */
+  --radius-pill: 999px; /* status pills only */
+
+  --container-max: 1200px;
+  --container-wide: 1440px;
+  --measure: 68ch;
+  --gutter: 20px;
+  --section-pad: var(--space-8);
+
+  --shadow-card: 0 1px 2px rgba(19, 41, 61, 0.06), 0 8px 24px rgba(19, 41, 61, 0.08);
+  --focus-ring: 2px solid var(--color-focus);
+  --focus-offset: 2px;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --duration: 160ms;
+}
+
+/* Desktop sizes (768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --fs-h1: 4rem;       --lh-h1: 1.0625; /* 64/68 */
+    --fs-h2: 2.75rem;    --lh-h2: 1.136;  /* 44/50 */
+    --fs-h3: 2rem;       --lh-h3: 1.1875; /* 32/38 */
+    --fs-h4: 1.5rem;     --lh-h4: 1.25;   /* 24/30 */
+    --fs-h5: 1.25rem;    --lh-h5: 1.4;    /* 20/28 */
+    --fs-body-lg: 1.1875rem; --lh-body-lg: 1.58; /* 19/30 */
+    --fs-body: 1.0625rem;    --lh-body: 1.65;    /* 17/28 */
+    --gutter: 48px;
+    --section-pad: var(--space-9);
+  }
+}
+
+/* Dark "lake" sections: add data-theme="lake" (or .section--lake) to any block */
+[data-theme="lake"],
+.section--lake {
+  --color-bg: var(--lake-900);
+  --color-surface: var(--lake-700);
+  --color-surface-alt: var(--pine-800);
+  --color-text: var(--birch-50);              /* 13.6:1 */
+  --color-text-muted: var(--fog-300);         /* 7.3:1 */
+  --color-heading: var(--birch-50);
+  --color-accent: var(--amber-400);           /* 6.6:1 */
+  --color-cta-bg: var(--amber-400);
+  --color-cta-bg-hover: var(--amber-300);
+  --color-cta-text: var(--lake-900);          /* 6.6:1 on amber */
+  --color-link: var(--amber-400);
+  --color-line: var(--lake-line);
+  --color-field-border: var(--steel-300);     /* 3.7:1 on lake-700 */
+  --color-focus: var(--amber-400);
+  --color-error: var(--red-300);
+  --color-success: var(--green-300);
+  background: var(--color-bg);
+  color: var(--color-text);
+}

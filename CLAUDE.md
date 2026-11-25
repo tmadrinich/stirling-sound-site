@@ -27,8 +27,18 @@ Booking: inquiry form for now. Calendar booking is Phase 4, only if the client w
 Audio: an embedded player (SoundCloud, Spotify or self-hosted) for Atmos and stereo samples. Atmos playback in the browser is limited, so link out to Apple Music or Tidal for spatial versions.
 
 ## Brand
-TBD. Waiting on the client's logo, colors and fonts. If none exist, propose a one-page brand guide in Phase 1 before any page work.
-Voice: established and personal. A family studio with 30 years of history and new Atmos capability. Not hype, no stock "world-class" language.
+Brand guide (design system): https://claude.ai/artifact/1tRTjm1hQG3zxnMcxCSNef — condensed in /docs/BRAND.md (approved copy, palette, type, form fields).
+- CSS: /css/tokens.css (single source of truth) → /css/base.css → page CSS. Use semantic variables (--color-cta-bg, --color-text, --color-heading), never raw hex in page CSS.
+- Dark sections: data-theme="lake". Never two dark sections in a row. One primary .btn per view.
+- Amber (--amber-400) never on light backgrounds (2.1:1, fails AA). Form borders use --color-field-border, not --color-line.
+- Type: Fraunces 400–500 for H1–H4 only · Inter for body, UI, H5–H6 · IBM Plex Mono for eyebrows, labels, gear, specs, rates (never paragraphs). Body ≥16px on mobile, max 68ch. Breakpoint 768px.
+- Fonts load from Google Fonts (link at the top of tokens.css). Logo: none yet; set the name in type until a final mark exists.
+- Images: width/height set, specific alt text, WebP/AVIF, hero ≤ ~350 KB. No stock, no AI-generated images.
+
+Voice: established and personal. A family studio with 30 years of history and new Atmos capability. Plain, confident, specific.
+Banned: world-class, state-of-the-art, cutting-edge, premier, legendary, iconic, unlock, elevate, curate, journey, retreat, oasis, immersive experience.
+Buttons are specific verbs (Check dates, Send an inquiry, See the rooms). "2.0" goes in the story only, never the logo, titles or taglines. Prefer "Since 1994" over "30 years."
+Rik Stirling founded the studio in 1994 and died in 2019; write about him in the past tense, respectfully.
 
 ## Site map (proposed)
 - Home: hero, the Atmos claim, services overview, call to book
@@ -45,4 +55,4 @@ Voice: established and personal. A family studio with 30 years of history and ne
 - Unnamed "Senior Audio Engineer"
 - Tiny CEO photo and camera-filename alt text
 - Instagram links to a personal handle. Ask whether a studio handle exists.
-- Verify the "Minnesota's first and only Dolby Atmos Music certified studio" claim with the client before publishing it.
+- Atmos claim: Taylor confirmed the room is real (Nov 25, 2026). Still confirm the exact wording with Nathan before publishing: Dolby says it does not certify or approve Atmos music studios, so "certified" and "first and only" must match his documentation. Until then use "a Dolby Atmos room."
