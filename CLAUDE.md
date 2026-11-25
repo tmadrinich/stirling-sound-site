@@ -32,7 +32,7 @@ Brand guide (design system): https://claude.ai/artifact/1tRTjm1hQG3zxnMcxCSNef �
 - Dark sections: data-theme="dark" ("lake" still works as an alias). The header is always dark. Never two dark sections in a row. One primary .btn per view.
 - Palette comes from the logo: black #0E0E0C + gold #C29957 on ivory. Logo gold (--gold-500) never as text on light backgrounds (2.2:1, fails AA); use --gold-700 there. Form borders use --color-field-border, not --color-line.
 - Type: Cormorant Garamond 500–600 for H1–H4 only · Inter for body, UI, H5–H6 · IBM Plex Mono for eyebrows, labels, gear, specs, rates (never paragraphs). Body ≥16px on mobile, max 68ch. Breakpoint 768px.
-- Fonts load from Google Fonts (link at the top of tokens.css). Logo: client files in /brand (see docs/BRAND.md). Header = monogram + typeset name; footer = full badge. Never recolor or redraw the logo.
+- Fonts load from Google Fonts (link at the top of tokens.css). Logo: client files in /brand (see docs/BRAND.md). Header = monogram + typeset name on desktop (768+), monogram only, centered, on mobile; footer = full badge. Never recolor or redraw the logo.
 - Images: width/height set, specific alt text, WebP/AVIF, hero ≤ ~350 KB. No stock, no AI-generated images.
 
 Voice: established and personal. A family studio with 30 years of history and new Atmos capability. Plain, confident, specific.
