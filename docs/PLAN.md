@@ -52,7 +52,7 @@
 6. Stirling Sound Experience: what lodging, how many nights, what the weekend add-ons are
 7. Credits, client list, testimonials and audio samples (stereo and Atmos)
 8. Atmos claim wording: what documentation backs "certified" and "first and only"? (Dolby says it doesn't certify music rooms; match the wording to his paperwork or directory listing.)
-9. Studio Instagram, or keep @the_nathan_stirling? Any other socials?
+9. ~~Studio Instagram~~ Answered: @stirlingsound (https://www.instagram.com/stirlingsound). Any other socials?
 10. Shop: anything to sell (merch, gift cards, session deposits)?
 11. Who registered stirlingsound.com, and do you have the login?
 12. Pro photos of the studio, or do we need a shoot?

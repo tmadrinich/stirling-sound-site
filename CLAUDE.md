@@ -54,5 +54,5 @@ Rik Stirling founded the studio in 1994 and died in 2019; write about him in the
 - No rates, gear, credits, samples, phone number or location
 - Unnamed "Senior Audio Engineer"
 - Tiny CEO photo and camera-filename alt text
-- Instagram links to a personal handle. Ask whether a studio handle exists.
+- Instagram links to a personal handle. Studio handle is @stirlingsound: use https://www.instagram.com/stirlingsound.
 - Atmos claim: Taylor confirmed the room is real (Nov 25, 2026). Still confirm the exact wording with Nathan before publishing: Dolby says it does not certify or approve Atmos music studios, so "certified" and "first and only" must match his documentation. Until then use "a Dolby Atmos room."
