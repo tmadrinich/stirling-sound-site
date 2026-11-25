@@ -30,6 +30,12 @@ Don't recolor, stretch, or set the full ring logo smaller than ~96px (the wordma
 | `--ivory-100` | #ECE6DB | Alternate light section |
 | `--ink-900` | #1A1916 | Body text (16:1 on ivory) |
 | `--stone-600` | #5B5850 | Secondary text (6.5:1) |
+| `--oxblood-900` | #3D1515 | Tertiary: deep bands (Our Story, Atmos feature) |
+| `--oxblood-800` | #4A1B1A | Tertiary: raised surfaces on oxblood |
+| `--oxblood-700` | #5A1F1F | Tertiary: main blocks, hover ground |
+| `--oxblood-500` | #7A2E2A | Tertiary: decorative highlight only |
+
+**60-30-10:** ivory and black grounds carry the page (black shades for depth), oxblood is the tertiary layer, gold is the 10% accent (CTAs, links, key headings, the Atmos badge). Oxblood goes in full-width bands via `data-theme="oxblood"`, at most one per page, never next to another dark band. On oxblood: ivory body text, gold-500 headings, gold-300 links, gold buttons with black text. Proposed Nov 25, 2026; needs Nathan's sign-off with the brand guide.
 
 Buttons: on light, black with gold text; on dark, gold with black text.
 Logo gold (#C29957) on light backgrounds is 2.4:1 — never for text there; use `--gold-700`.

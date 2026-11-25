@@ -25,6 +25,11 @@
   --line-200: #D9D2C5;   /* hairlines on light (decorative) */
   --steel-400: #7D7A72;  /* field borders on light (3:1+) */
   --steel-300: #77736A;  /* field borders on black (3:1+) */
+  --oxblood-900: #3D1515; /* tertiary: deep bands (Our Story, Atmos feature) */
+  --oxblood-800: #4A1B1A; /* tertiary: raised surfaces on oxblood */
+  --oxblood-700: #5A1F1F; /* tertiary: main blocks / hover ground */
+  --oxblood-500: #7A2E2A; /* tertiary: decorative highlight only, never text ground */
+  --oxblood-line: #6B2B28; /* hairlines on oxblood (decorative) */
   --red-600: #A3261F;
   --red-300: #F0907F;
   --green-600: #2F6B45;
@@ -131,6 +136,35 @@
   --color-link: var(--gold-500);
   --color-line: var(--black-line);
   --color-field-border: var(--steel-300);     /* 3.8:1 on black-900 */
+  --color-focus: var(--gold-300);
+  --color-error: var(--red-300);
+  --color-success: var(--green-300);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Oxblood sections (tertiary): add data-theme="oxblood" to a full-width band.
+   60-30-10: ivory + black grounds carry the page, oxblood bands are the
+   tertiary layer, gold stays the accent. At most one oxblood band per page,
+   never next to another dark or oxblood section.
+   Contrast (WCAG): ivory text 14.5:1 on 900, 11.6:1 on 700; gold-500 6.1:1
+   on 900, 4.8:1 on 700; fog-300 6.4:1 / 5.1:1. Field borders use fog-300
+   (steel-300 drops below 3:1 on oxblood-700). */
+[data-theme="oxblood"],
+.section--oxblood {
+  --color-bg: var(--oxblood-900);
+  --color-surface: var(--oxblood-800);
+  --color-surface-alt: var(--oxblood-700);
+  --color-text: var(--ivory-50);
+  --color-text-muted: var(--fog-300);
+  --color-heading: var(--gold-500);
+  --color-accent: var(--gold-500);
+  --color-cta-bg: var(--gold-500);
+  --color-cta-bg-hover: var(--gold-300);
+  --color-cta-text: var(--black-950);
+  --color-link: var(--gold-300);              /* 7.8:1 on 900, 6.2:1 on 700 */
+  --color-line: var(--oxblood-line);
+  --color-field-border: var(--fog-300);
   --color-focus: var(--gold-300);
   --color-error: var(--red-300);
   --color-success: var(--green-300);
