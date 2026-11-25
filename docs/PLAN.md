@@ -62,6 +62,11 @@
 11. Who registered stirlingsound.com, and do you have the login?
 12. Pro photos of the studio, or do we need a shoot?
 13. Availability calendar: which calendar app do you use? Full days only, or half days too? How many months ahead should it show?
+14. Deposit and cancellation policy (Taylor's proposal, Nov 25, 2026; drafted on services.html and contact.html, marked PENDING NATHAN APPROVAL):
+    - 25% deposit holds the date.
+    - Reschedule with 72 hours' notice (day sessions) or 7 days' notice (weekend and multi-day blocks) and the deposit moves to the new date.
+    - Cancel or no-show inside the window: deposit not refunded. Mix/master billed separately.
+    - Confirm: does the deposit count toward the final bill? (Copy assumes yes.) Refund or credit only for an early cancel? Reschedule limit or credit expiry? How he collects it (Stripe or Square payment link after confirming the date)?
 
 ## Pricing reference (Bullpen web offer)
 $300 base (home) + $100 per extra page + $200 per specialty page (contact form, booking, embeds). 25% rush fee. 25% deposit, 75% at launch, two revision rounds.
