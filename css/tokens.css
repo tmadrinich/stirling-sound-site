@@ -4,54 +4,52 @@
    Load fonts first, in <head>:
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
    ========================================================================== */
 
 :root {
-  /* ---- Palette (raw) -------------------------------------------------- */
-  --lake-900: #13293D;   /* anchor: deep lake navy */
-  --lake-700: #1C3A52;   /* raised surfaces on navy */
-  --lake-500: #2E6A96;   /* focus ring on light */
-  --lake-line: #2E4A61;  /* hairlines on navy (decorative) */
-  --pine-800: #1E3B33;   /* dark pine: alternate dark ground */
-  --cedar-600: #9C4F22;  /* cedar: CTA on light */
-  --cedar-700: #7F3F19;  /* cedar hover / pressed */
-  --amber-400: #D9A35B;  /* early light: accent + CTA on dark ONLY */
-  --amber-300: #E6B877;  /* amber hover on dark */
-  --birch-50: #F7F4EE;   /* page background */
-  --mist-100: #ECE6DB;   /* alternate light section */
+  /* ---- Palette (raw) — sampled from the Stirling Sound logo ---------- */
+  --black-950: #0E0E0C;  /* logo field: warm near-black (anchor) */
+  --black-900: #171714;  /* raised surfaces on black */
+  --black-800: #201F1B;  /* alternate dark ground / hover */
+  --black-line: #2E2C26; /* hairlines on black (decorative) */
+  --gold-500: #C29957;   /* logo gold: accent + CTA on dark ONLY */
+  --gold-300: #D4B07A;   /* gold hover / focus on dark */
+  --gold-700: #7E6130;   /* deep gold: accent text on light (AA) */
+  --ivory-50: #F7F4EE;   /* page background */
+  --ivory-100: #ECE6DB;  /* alternate light section */
   --paper: #FFFFFF;      /* cards, fields */
-  --charcoal-900: #23272B; /* body text */
-  --stone-600: #5B6167;  /* secondary text on light */
-  --fog-300: #AEB7BF;    /* secondary text on navy */
+  --ink-900: #1A1916;    /* body text on light */
+  --stone-600: #5B5850;  /* secondary text on light */
+  --fog-300: #A9A49B;    /* secondary text on black */
   --line-200: #D9D2C5;   /* hairlines on light (decorative) */
-  --steel-400: #7D8287;  /* field borders on light (3:1+) */
-  --steel-300: #7E93A6;  /* field borders on navy (3:1+) */
+  --steel-400: #7D7A72;  /* field borders on light (3:1+) */
+  --steel-300: #77736A;  /* field borders on black (3:1+) */
   --red-600: #A3261F;
   --red-300: #F0907F;
   --green-600: #2F6B45;
   --green-300: #86C9A0;
 
   /* ---- Semantic (light / default) ------------------------------------- */
-  --color-bg: var(--birch-50);
+  --color-bg: var(--ivory-50);
   --color-surface: var(--paper);
-  --color-surface-alt: var(--mist-100);
-  --color-text: var(--charcoal-900);          /* 13.7:1 on birch */
-  --color-text-muted: var(--stone-600);       /* 5.7:1 on birch */
-  --color-heading: var(--lake-900);           /* 13.6:1 on birch */
-  --color-accent: var(--cedar-600);           /* 5.4:1 on birch */
-  --color-cta-bg: var(--cedar-600);
-  --color-cta-bg-hover: var(--cedar-700);
-  --color-cta-text: var(--paper);             /* 5.9:1 on cedar */
-  --color-link: var(--lake-900);
+  --color-surface-alt: var(--ivory-100);
+  --color-text: var(--ink-900);               /* 16.0:1 on ivory */
+  --color-text-muted: var(--stone-600);       /* 6.5:1 on ivory */
+  --color-heading: var(--black-950);          /* 17.6:1 on ivory */
+  --color-accent: var(--gold-700);            /* 5.3:1 on ivory, 4.7:1 on ivory-100 */
+  --color-cta-bg: var(--black-950);
+  --color-cta-bg-hover: var(--black-800);
+  --color-cta-text: var(--gold-500);          /* 7.4:1 on black */
+  --color-link: var(--black-950);
   --color-line: var(--line-200);
-  --color-field-border: var(--steel-400);     /* 3.5:1 on birch */
-  --color-focus: var(--lake-500);             /* 5.3:1 on birch */
+  --color-field-border: var(--steel-400);     /* 3.9:1 on ivory */
+  --color-focus: var(--gold-700);             /* 5.3:1 on ivory */
   --color-error: var(--red-600);
   --color-success: var(--green-600);
 
   /* ---- Type ----------------------------------------------------------- */
-  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-serif: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
@@ -72,7 +70,8 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
-  --tracking-display: -0.015em;
+  --tracking-display: 0;
+  --tracking-caps: 0.14em;  /* spaced capitals, as in the logo wordmark */
   --tracking-label: 0.08em;
 
   /* ---- Space, radius, layout ----------------------------------------- */
@@ -91,7 +90,7 @@
   --gutter: 20px;
   --section-pad: var(--space-8);
 
-  --shadow-card: 0 1px 2px rgba(19, 41, 61, 0.06), 0 8px 24px rgba(19, 41, 61, 0.08);
+  --shadow-card: 0 1px 2px rgba(14, 14, 12, 0.06), 0 8px 24px rgba(14, 14, 12, 0.10);
   --focus-ring: 2px solid var(--color-focus);
   --focus-offset: 2px;
   --ease: cubic-bezier(0.2, 0, 0, 1);
@@ -113,23 +112,26 @@
   }
 }
 
-/* Dark "lake" sections: add data-theme="lake" (or .section--lake) to any block */
+/* Dark sections: add data-theme="dark" (or .section--dark) to any block.
+   "lake" is kept as an alias so older markup still works. */
+[data-theme="dark"],
+.section--dark,
 [data-theme="lake"],
 .section--lake {
-  --color-bg: var(--lake-900);
-  --color-surface: var(--lake-700);
-  --color-surface-alt: var(--pine-800);
-  --color-text: var(--birch-50);              /* 13.6:1 */
-  --color-text-muted: var(--fog-300);         /* 7.3:1 */
-  --color-heading: var(--birch-50);
-  --color-accent: var(--amber-400);           /* 6.6:1 */
-  --color-cta-bg: var(--amber-400);
-  --color-cta-bg-hover: var(--amber-300);
-  --color-cta-text: var(--lake-900);          /* 6.6:1 on amber */
-  --color-link: var(--amber-400);
-  --color-line: var(--lake-line);
-  --color-field-border: var(--steel-300);     /* 3.7:1 on lake-700 */
-  --color-focus: var(--amber-400);
+  --color-bg: var(--black-950);
+  --color-surface: var(--black-900);
+  --color-surface-alt: var(--black-800);
+  --color-text: var(--ivory-50);              /* 17.6:1 */
+  --color-text-muted: var(--fog-300);         /* 7.8:1 */
+  --color-heading: var(--gold-500);           /* 7.4:1 */
+  --color-accent: var(--gold-500);            /* 7.4:1 */
+  --color-cta-bg: var(--gold-500);
+  --color-cta-bg-hover: var(--gold-300);
+  --color-cta-text: var(--black-950);         /* 7.4:1 on gold */
+  --color-link: var(--gold-500);
+  --color-line: var(--black-line);
+  --color-field-border: var(--steel-300);     /* 3.8:1 on black-900 */
+  --color-focus: var(--gold-300);
   --color-error: var(--red-300);
   --color-success: var(--green-300);
   background: var(--color-bg);

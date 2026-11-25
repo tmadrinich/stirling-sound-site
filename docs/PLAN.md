@@ -11,7 +11,8 @@
 - [x] Brand guide proposed (no client brand assets existed): https://claude.ai/artifact/1tRTjm1hQG3zxnMcxCSNef, summary in /docs/BRAND.md
 - [x] /css/tokens.css: colors, type scale and spacing
 - [x] /css/base.css: type, buttons, cards, gear table, form styles
-- [ ] Client sign-off on the brand guide
+- [x] Client logo received (Nov 25, 2026). Palette re-based on it: black + gold on ivory, Cormorant Garamond headings, logo in header/footer, favicons (branch `brand/logo-colors`)
+- [ ] Client sign-off on the brand guide (the artifact still shows the old lake/cedar palette; update it after Taylor approves this branch)
 - Components: nav, footer, hero, service card, gear list, audio player block, credit grid, testimonial, CTA band, inquiry form
 - One styled sample page for client sign-off
 **Stop for approval.**
@@ -49,7 +50,7 @@
 - Handoff: client owns the domain and hosting, Taylor stays on as collaborator, offer the $25/mo retainer
 
 ## Questions for Nathan
-1. Brand guide sign-off (we proposed one). Any existing logo files to work from?
+1. Brand guide sign-off. Logo received; do you have a vector version (SVG/AI/EPS) and the name of the font used in the wordmark?
 2. Studio address, or the area to list ("Minneapolis area," etc.)? Phone number?
 3. Who is the Senior Audio Engineer? Bio and photo?
 4. Gear list and room details. Is there more than the Atmos room?

@@ -8,22 +8,37 @@ Condensed from the brand guide: https://claude.ai/artifact/1tRTjm1hQG3zxnMcxCSNe
 **Alternates:** Records made on the lake since 1994. / Come up. Stay. Make the record. / A real room on a real lake.
 **Values:** The work speaks · Family, not a facility · Room to focus.
 
-## Palette
+## Logo (received Nov 25, 2026)
+Gold "SS" monogram and STIRLING SOUND wordmark in a thin gold ring, on black. Files in /brand:
+- `logo-source.png` — original from the client (1024px). Keep as the master.
+- `logo-gold.png` — full logo, gold on transparent (for dark grounds).
+- `logo-badge.webp` — full logo on its black disc (works on light grounds; used in the footer).
+- `monogram-gold.png` — SS mark only, gold on transparent (header lockup with the name set in type).
+- `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`, `icon-512.png`.
+Don't recolor, stretch, or set the full ring logo smaller than ~96px (the wordmark inside gets illegible). Below that, use the monogram + typeset name.
+
+## Palette (sampled from the logo)
 | Token | Hex | Role |
 | --- | --- | --- |
-| `--lake-900` | #13293D | Anchor: headings, dark sections, wordmark |
-| `--pine-800` | #1E3B33 | Alternate dark section |
-| `--cedar-600` | #9C4F22 | CTA + accent on light (white text 5.9:1) |
-| `--amber-400` | #D9A35B | CTA + accent on dark only (navy text 6.6:1) |
-| `--birch-50` | #F7F4EE | Page background |
-| `--mist-100` | #ECE6DB | Alternate light section |
-| `--charcoal-900` | #23272B | Body text (13.7:1 on birch) |
-| `--stone-600` | #5B6167 | Secondary text (5.7:1) |
+| `--black-950` | #0E0E0C | Anchor: logo field, dark sections, header, CTA on light |
+| `--black-900` | #171714 | Raised surfaces on black |
+| `--black-800` | #201F1B | Alternate dark ground / hover |
+| `--gold-500` | #C29957 | Logo gold: headings, accent and CTA on dark only (7.4:1 on black) |
+| `--gold-300` | #D4B07A | Gold hover / focus on dark |
+| `--gold-700` | #7E6130 | Gold for text on light (5.3:1 on ivory) |
+| `--ivory-50` | #F7F4EE | Page background |
+| `--ivory-100` | #ECE6DB | Alternate light section |
+| `--ink-900` | #1A1916 | Body text (16:1 on ivory) |
+| `--stone-600` | #5B5850 | Secondary text (6.5:1) |
+
+Buttons: on light, black with gold text; on dark, gold with black text.
+Logo gold (#C29957) on light backgrounds is 2.2:1 — never for text there; use `--gold-700`.
 
 ## Type scale (desktop / mobile, px)
-H1 64/68 · 40/44 — H2 44/50 · 32/38 — H3 32/38 · 26/32 — H4 24/30 · 21/28 (Fraunces)
+H1 64/68 · 40/44 — H2 44/50 · 32/38 — H3 32/38 · 26/32 — H4 24/30 · 21/28 (Cormorant Garamond 500–600, to match the logo's classic serif)
 H5 20/28 · 18/26 — H6 16/24 — Body-lg 19/30 · 18/28 — Body 17/28 · 16/26 — Small 14/22 (Inter)
 Label 13/16 +0.08em caps — Label-sm 12/16 — Spec 14/22 (IBM Plex Mono)
+Header name: Cormorant Garamond 600, uppercase, +0.14em (`--tracking-caps`), gold on black.
 
 ## Approved sample copy
 
@@ -37,7 +52,7 @@ Label 13/16 +0.08em caps — Label-sm 12/16 — Spec 14/22 (IBM Plex Mono)
 - Eyebrow: THE STUDIO · H2: The rooms
 - [ROOM COUNT] rooms on the water [VERIFY WHICH ROOMS HAVE A LAKE VIEW]. The live room is [DIMENSIONS] with [CEILING HEIGHT] ceilings and [WINDOW / VIEW DETAIL]. The control room is built around a [CONSOLE MAKE / MODEL]. The Atmos room runs [SPEAKER CONFIGURATION] for mixing in Dolby Atmos without leaving the building.
 
-**Booking CTA (navy band, every page)**
+**Booking CTA (black band, every page)**
 - Eyebrow: BOOKING · H2: Tell us about the record.
 - Send your dates, how many people are coming and what you're making. We'll reply with availability and a quote within [RESPONSE TIME].
 - Button: Send an inquiry · Link: or call [PHONE]
