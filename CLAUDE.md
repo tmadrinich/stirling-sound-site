@@ -13,7 +13,7 @@ Repo: tmadrinich/stirling-sound-site. Hosting: TBD. Domain: stirlingsound.com (c
 
 ## Rules
 1. Read every file in the repo before changing anything. Summarize what exists first.
-2. Work on a branch. Small commits with clear messages. Merge to main only with Taylor's OK.
+2. Work on a branch. Small commits with clear messages. When the work is done and checked, merge it into main and push, without asking first (Taylor approved auto-merge, Nov 25, 2026). Leave the branch on GitHub so it can be reviewed later.
 3. Plan first, build in phases, and stop for Taylor's approval between phases. Ask when something is unclear.
 4. Never deploy, change DNS, or touch the Wix site without Taylor's OK. Back up the Wix content (text and images) before cutover.
 5. Don't invent gear, rates, credits, testimonials, addresses or engineer names. Use placeholders like [GEAR LIST] and flag them.
