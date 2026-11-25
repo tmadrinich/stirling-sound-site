@@ -17,6 +17,9 @@
 **Stop for approval.**
 
 ## Phase 2: Pages
+- [x] Draft built with placeholders (branch `pages`): Home (index.html), Services & rates (services.html), Our Story (about.html), The Studio / gear (gear.html). Shared css/site.css.
+- [ ] Work page (credits, samples) and Book/Contact page with the StaticForms inquiry form. Until then, inquiry buttons use mailto:nathan@stirlingsound.com.
+- [ ] Replace every highlighted [PLACEHOLDER] with client content; remove the noindex tag at launch
 - Home, The Studio, Services, Our Story, Work, Book/Contact
 - Real content where it exists, flagged placeholders everywhere else
 **Stop for approval** (revision round 1).
