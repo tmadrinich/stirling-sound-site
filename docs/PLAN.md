@@ -21,6 +21,8 @@
 - [x] Added (inspired by Blackbird's layout): hero phone line, gear-by-the-numbers row, "Made here" album covers, testimonial block (Home); room quick facts, floor plan and photo gallery (Studio). Show counts only once Nathan supplies real numbers; testimonials only real and with permission.
 - [x] Book/Contact page (contact.html) with the inquiry form wired for StaticForms (JSON fetch, honeypot, inline thank-you). All booking buttons now point here.
 - [ ] Connect the form: put the StaticForms API key in data-api-key on the form in contact.html (keys are public form keys; never commit account passwords). Until then the form shows a "not connected yet" note with the email address.
+- [x] Availability calendar on contact.html (branch `availability-calendar`, js/availability.js): Open / Limited / Booked month view, 6 months ahead. Clicking an open day fills Preferred dates. Shows clearly labeled SAMPLE dates until connected.
+- [ ] Connect the calendar: Nathan makes a "Studio Availability" Google Calendar shared public as free/busy only; put its Calendar ID in data-calendar-id and a referrer-restricted Calendar API key in data-api-key. Day = Booked at 6+ busy hours, Limited under that (adjust once Nathan confirms full vs half days).
 - [ ] Work page (credits, samples)
 - [ ] Replace every highlighted [PLACEHOLDER] with client content; remove the noindex tag at launch
 - Home, The Studio, Services, Our Story, Work, Book/Contact
@@ -59,6 +61,7 @@
 10. Shop: anything to sell (merch, gift cards, session deposits)?
 11. Who registered stirlingsound.com, and do you have the login?
 12. Pro photos of the studio, or do we need a shoot?
+13. Availability calendar: which calendar app do you use? Full days only, or half days too? How many months ahead should it show?
 
 ## Pricing reference (Bullpen web offer)
 $300 base (home) + $100 per extra page + $200 per specialty page (contact form, booking, embeds). 25% rush fee. 25% deposit, 75% at launch, two revision rounds.
