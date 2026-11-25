@@ -26,7 +26,7 @@ Don't recolor, stretch, or set the full ring logo smaller than ~96px (the wordma
 | `--gold-500` | #C29957 | Logo gold: headings, accent and CTA on dark only (7.4:1 on black) |
 | `--gold-300` | #D4B07A | Gold hover / focus on dark |
 | `--gold-700` | #7E6130 | Gold for text on light (5.3:1 on ivory) |
-| `--ivory-50` | #F7F4EE | Page background |
+| `--ivory-50` | #F7F4EE | Body text on dark; ground of optional light sections |
 | `--ivory-100` | #ECE6DB | Alternate light section |
 | `--ink-900` | #1A1916 | Body text (16:1 on ivory) |
 | `--stone-600` | #5B5850 | Secondary text (6.5:1) |
@@ -35,9 +35,9 @@ Don't recolor, stretch, or set the full ring logo smaller than ~96px (the wordma
 | `--oxblood-700` | #5A1F1F | Tertiary: main blocks, hover ground |
 | `--oxblood-500` | #7A2E2A | Tertiary: decorative highlight only |
 
-**60-30-10:** ivory and black grounds carry the page (black shades for depth), oxblood is the tertiary layer, gold is the 10% accent (CTAs, links, key headings, the Atmos badge). Oxblood goes in full-width bands via `data-theme="oxblood"`, at most one per page, never next to another dark band. On oxblood: ivory body text, gold-500 headings, gold-300 links, gold buttons with black text. Proposed Nov 25, 2026; needs Nathan's sign-off with the brand guide.
+**60-30-10 ("control room", Nov 25, 2026):** black shades are the 60 (page `--black-950`, surfaces `--black-900`, alternate sections and panels `--black-800`), oxblood is the 30 (booking band and feature cards on `--oxblood-700`, panels inside on 800/900, via `data-theme="oxblood"`), gold is the 10 (CTAs, links, headings, the Atmos badge). Ivory body text throughout; ivory is still available as a section via `data-theme="light"`. Never two oxblood bands in a row. On oxblood: gold-500 headings, gold-300 links, gold buttons with black text. Needs Nathan's sign-off with the brand guide.
 
-Buttons: on light, black with gold text; on dark, gold with black text.
+Buttons: gold with black text (default, on black and oxblood); black with gold text only inside a light section.
 Logo gold (#C29957) on light backgrounds is 2.4:1 — never for text there; use `--gold-700`.
 
 ## Type scale (desktop / mobile, px)

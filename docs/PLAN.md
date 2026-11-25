@@ -13,7 +13,8 @@
 - [x] /css/base.css: type, buttons, cards, gear table, form styles
 - [x] Client logo received (Nov 25, 2026). Palette re-based on it: black + gold on ivory, Cormorant Garamond headings, logo in header/footer, favicons (branch `brand/logo-colors`)
 - [x] Tertiary color added: oxblood shades + `data-theme="oxblood"` section theme (branch `brand/oxblood-tertiary`). Tokens only; no page uses it yet.
-- [ ] Client sign-off on the brand guide (the artifact still shows the old lake/cedar palette; update it after Taylor approves this branch)
+- [x] "Control room" direction (branch `design/control-room`): black page by default, oxblood booking band and Experience card, gold accent. Ivory kept as an optional `data-theme="light"` section. Main still has the ivory version for comparison.
+- [ ] Client sign-off on the brand guide (update the brand guide artifact to the black/oxblood/gold system once Taylor picks a direction) (the artifact still shows the old lake/cedar palette; update it after Taylor approves this branch)
 - Components: nav, footer, hero, service card, gear list, audio player block, credit grid, testimonial, CTA band, inquiry form
 - One styled sample page for client sign-off
 **Stop for approval.**
